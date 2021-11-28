@@ -2862,7 +2862,7 @@ const errorCountryName = error => {
 
 const onInputField = e => {
   if (e.target.value.trim() !== "") {
-    (0, _fetchCountries.fetchCountries)(e.target.value).then(createListCountry).catch(error => errorCountryName(error));
+    (0, _fetchCountries.fetchCountries)(e.target.value).then(createListCountry).catch(errorCountryName);
   }
 }; // ---------------------------------
 // --- Слушатели -------------------
@@ -2911,7 +2911,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52886" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62731" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
