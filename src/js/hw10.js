@@ -75,7 +75,7 @@ const onInputField = (e) => {
 	if (e.target.value.trim() !== "") {
 	fetchCountries(e.target.value)
 	.then(createListCountry)
-	.catch((error) => errorCountryName(error));
+	.catch(errorCountryName);
 	}
 };
 // ---------------------------------
