@@ -2634,7 +2634,7 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<li style=\"list-style: none;\">\r\n  <p class=\"countryList\"><img src=\"" + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "flags") : depth0) != null ? lookupProperty(stack1, "svg") : stack1, depth0)) + "\" width=\"30px\" /> " + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "name") : depth0) != null ? lookupProperty(stack1, "official") : stack1, depth0)) + "</p>\r\n</li>\r\n";
+    return "  <li style=\"list-style: none;\">\r\n    <p class=\"countryList\"><img src=\"" + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "flags") : depth0) != null ? lookupProperty(stack1, "svg") : stack1, depth0)) + "\" width=\"30px\" /> " + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "name") : depth0) != null ? lookupProperty(stack1, "official") : stack1, depth0)) + "</p>\r\n  </li>\r\n";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function (container, depth0, helpers, partials, data) {
@@ -2699,49 +2699,49 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<div>\r\n  <p class=\"countryOne\"><img src=\"" + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "flags") : depth0) != null ? lookupProperty(stack1, "svg") : stack1, depth0)) + "\" width=\"50px\" /> " + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "name") : depth0) != null ? lookupProperty(stack1, "official") : stack1, depth0)) + "</p>\r\n  <p><span class=\"bold\">Capital:</span> " + alias2((helper = (helper = lookupProperty(helpers, "capital") || (depth0 != null ? lookupProperty(depth0, "capital") : depth0)) != null ? helper : alias4, typeof helper === alias5 ? helper.call(alias3, {
+    return "  <div>\r\n    <p class=\"countryOne\"><img src=\"" + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "flags") : depth0) != null ? lookupProperty(stack1, "svg") : stack1, depth0)) + "\" width=\"50px\" /> " + alias2(alias1((stack1 = depth0 != null ? lookupProperty(depth0, "name") : depth0) != null ? lookupProperty(stack1, "official") : stack1, depth0)) + "</p>\r\n    <p><span class=\"bold\">Capital:</span> " + alias2((helper = (helper = lookupProperty(helpers, "capital") || (depth0 != null ? lookupProperty(depth0, "capital") : depth0)) != null ? helper : alias4, typeof helper === alias5 ? helper.call(alias3, {
       "name": "capital",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 4,
-          "column": 40
+          "column": 42
         },
         "end": {
           "line": 4,
-          "column": 51
+          "column": 53
         }
       }
-    }) : helper)) + "</p>\r\n  <p><span class=\"bold\">Population:</span> " + alias2((helper = (helper = lookupProperty(helpers, "population") || (depth0 != null ? lookupProperty(depth0, "population") : depth0)) != null ? helper : alias4, typeof helper === alias5 ? helper.call(alias3, {
+    }) : helper)) + "</p>\r\n    <p><span class=\"bold\">Population:</span> " + alias2((helper = (helper = lookupProperty(helpers, "population") || (depth0 != null ? lookupProperty(depth0, "population") : depth0)) != null ? helper : alias4, typeof helper === alias5 ? helper.call(alias3, {
       "name": "population",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 5,
-          "column": 43
+          "column": 45
         },
         "end": {
           "line": 5,
-          "column": 57
+          "column": 59
         }
       }
-    }) : helper)) + "</p>\r\n  <p><span class=\"bold\">Languages:</span> " + alias2((helper = (helper = lookupProperty(helpers, "languages") || (depth0 != null ? lookupProperty(depth0, "languages") : depth0)) != null ? helper : alias4, typeof helper === alias5 ? helper.call(alias3, {
+    }) : helper)) + "</p>\r\n    <p><span class=\"bold\">Languages:</span> " + alias2((helper = (helper = lookupProperty(helpers, "languages") || (depth0 != null ? lookupProperty(depth0, "languages") : depth0)) != null ? helper : alias4, typeof helper === alias5 ? helper.call(alias3, {
       "name": "languages",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 6,
-          "column": 42
+          "column": 44
         },
         "end": {
           "line": 6,
-          "column": 55
+          "column": 57
         }
       }
-    }) : helper)) + "</p>\r\n</div>\r\n";
+    }) : helper)) + "</p>\r\n  </div>\r\n";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function (container, depth0, helpers, partials, data) {
@@ -2823,7 +2823,6 @@ const oneCountry = arrayCountry => {
   clearList();
   arrayCountry[0].languages = Object.values(arrayCountry[0].languages).join(', ');
   refs.countryInfo.insertAdjacentHTML('beforeend', (0, _oneCountry.default)(arrayCountry));
-  console.log(arrayCountry[0].languages);
 }; // Очистка
 
 
@@ -2843,7 +2842,6 @@ const createListCountry = function (arrayCountry) {
   ; // Один результат
 
   if (arrayCountry.length === 1) {
-    clearList();
     oneCountry(arrayCountry);
     return;
   }
@@ -2911,7 +2909,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62731" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "24483" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

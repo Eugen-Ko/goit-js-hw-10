@@ -15,7 +15,6 @@ const refs = {
   searchBox: document.getElementById('search-box'),
   countryList: document.querySelector('.country-list'),
 	countryInfo: document.querySelector('.country-info'),
-
 }
 // ---------------------------------
 
@@ -38,7 +37,6 @@ const oneCountry = arrayCountry => {
 	clearList();
 	arrayCountry[0].languages = Object.values(arrayCountry[0].languages).join(', ');
 	refs.countryInfo.insertAdjacentHTML('beforeend', oneCountryHbs(arrayCountry));
-	console.log(arrayCountry[0].languages);
 }
 
 // Очистка
@@ -56,7 +54,6 @@ const createListCountry = function (arrayCountry) {
 	};
 	// Один результат
 	if (arrayCountry.length === 1) {
-		clearList();
 		oneCountry(arrayCountry);
 		return;
 	};
@@ -73,9 +70,9 @@ const errorCountryName = error => {
 // Обработка ввода символов
 const onInputField = (e) => {
 	if (e.target.value.trim() !== "") {
-	fetchCountries(e.target.value)
-	.then(createListCountry)
-	.catch(errorCountryName);
+    fetchCountries(e.target.value)
+    	.then(createListCountry)
+    	.catch(errorCountryName);
 	}
 };
 // ---------------------------------
